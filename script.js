@@ -7,10 +7,16 @@ let register = document.querySelector(".register");
 let sideBarShow = document.querySelector(".sideBarShow");
 let loading = document.querySelector(".loading");
 let editpic = document.querySelector(".editpic");
+let dataClear = document.querySelector(".dataClear");
 
 let loadingBar = () => {
   loading.style.display = "block";
 };
+let clearData = () => {
+  localStorage.clear();
+  location.reload();
+};
+dataClear.addEventListener("click", clearData);
 
 //id of span
 let profile = document.querySelector("img");
@@ -46,6 +52,7 @@ scrollSideBar.addEventListener("click", function () {
   if (!localStorage.getItem("Name")) {
     editButton.style.display = "none";
     editpic.style.display = "none";
+    dataClear.style.display = "none";
 
     let signal = true;
     let registerFn = () => {
