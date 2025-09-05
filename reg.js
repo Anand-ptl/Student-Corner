@@ -39,6 +39,7 @@ let branch = document.getElementById("branch");
 let prn = document.getElementById("prn");
 let mobileNumber = document.getElementById("mob");
 let Email = document.getElementById("mail");
+let instCode = document.getElementById("instCode");
 
 let saveData = (e) => {
   if (
@@ -55,6 +56,7 @@ let saveData = (e) => {
   } else {
     localStorage.setItem("Name", name.value);
     localStorage.setItem("DOB", DOB.value);
+    localStorage.setItem("InstCode", instCode.value);
     localStorage.setItem("Branch", branch.value);
     localStorage.setItem("PRN", prn.value);
     localStorage.setItem("MobileNumber", mobileNumber.value);

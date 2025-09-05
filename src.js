@@ -5,6 +5,7 @@ let prn = document.querySelector("#PRN");
 let mobile = document.querySelector("#MobileNumber");
 let email = document.querySelector("#Email");
 let loading = document.querySelector(".loading");
+let insCode = document.querySelector("#insCode");
 
 let saveBtn = document.querySelector(".save");
 let details = document.querySelector(".details");
@@ -16,6 +17,7 @@ let randerData = () => {
   prn.innerText = localStorage.getItem("PRN");
   mobile.innerText = localStorage.getItem("MobileNumber");
   email.innerText = localStorage.getItem("Email");
+  insCode.innerText = localStorage.getItem("InstCode");
 };
 randerData();
 let goBack = () => {

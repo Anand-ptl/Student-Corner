@@ -26,6 +26,8 @@ let branch = document.getElementById("spanOfBranch");
 let prn = document.getElementById("spanOfprn");
 let mobileNumber = document.getElementById("spanOfmob");
 let Email = document.getElementById("spanOfmail");
+let instCode = document.getElementById("spanOfinstCode");
+let code = document.getElementById("spanOfcode");
 
 let showSideBar = () => {
   if (sideBar.className !== "sideBarShow") {
@@ -62,14 +64,20 @@ scrollSideBar.addEventListener("click", function () {
     };
     register.addEventListener("click", registerFn);
   } else {
+    let prnGen = `230${localStorage.getItem("InstCode")}12450${localStorage
+      .getItem("MobileNumber")
+      .slice(0, 4)}`;
+    console.log(prnGen);
     register.style.display = "none";
     name.textContent = localStorage.getItem("Name");
     DOB.textContent = localStorage.getItem("DOB");
     branch.textContent = localStorage.getItem("Branch");
-    prn.textContent = localStorage.getItem("PRN");
+    prn.textContent = prnGen;
     mobileNumber.textContent = Number(localStorage.getItem("MobileNumber"));
     Email.textContent = localStorage.getItem("Email");
     profile.src = localStorage.getItem("Image");
+    instCode.textContent = localStorage.getItem("InstCode");
+    code.textContent = localStorage.getItem("InstCode");
   }
 });
 
