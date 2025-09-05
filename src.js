@@ -23,6 +23,9 @@ randerData();
 let goBack = () => {
   location.href = "index.html";
 };
+let stay = () => {
+  location.href = "edit.html";
+};
 
 let loadingBar = () => {
   loading.style.display = "block";
@@ -70,7 +73,7 @@ let saveData = () => {
           }, 700);
           setTimeout(() => {
             goBack();
-          }, 700);
+          }, 1000);
         } else {
           alert("Fill The Input Box");
         }
