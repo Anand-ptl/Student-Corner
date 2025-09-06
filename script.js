@@ -8,6 +8,7 @@ let sideBarShow = document.querySelector(".sideBarShow");
 let loading = document.querySelector(".loading");
 let editpic = document.querySelector(".editpic");
 let dataClear = document.querySelector(".dataClear");
+let p = document.querySelector("p");
 
 let loadingBar = () => {
   loading.style.display = "block";
@@ -67,7 +68,7 @@ scrollSideBar.addEventListener("click", function () {
     let prnGen = `230${localStorage.getItem("InstCode")}12450${localStorage
       .getItem("MobileNumber")
       .slice(0, 4)}`;
-    console.log(prnGen);
+    // console.log(prnGen);
     register.style.display = "none";
     name.textContent = localStorage.getItem("Name");
     DOB.textContent = localStorage.getItem("DOB");
@@ -81,30 +82,29 @@ scrollSideBar.addEventListener("click", function () {
   }
 });
 
-// let the = "white";
-// //theme change
-// let theme = document.querySelector(".theme");
+//theme change
+let theme = document.querySelector(".theme");
+let currentTheme = "white";
 
-// theme.addEventListener("click", function () {
-//   if (the === "white") {
-//     sideBar.style.backgroundColor = "black";
-//     sideBar.style.color = "white";
-//     mainSide.style.backgroundColor = "black";
-//     mainSide.style.color = "white";
-//     the = "dark";
-//     console.log(the);
-//   } else {
-//     sideBar.style.backgroundColor = "white";
-//     sideBar.style.color = "black";
-//     mainSide.style.backgroundColor = "white";
-//     mainSide.style.color = "black";
-//     sideBarShow.stye.border = "10px solid white";
-//     // sideBarShow.stye.filter = "drop-shadow(10px 10px 5px white)";
+theme.addEventListener("click", function () {
+  if (currentTheme === "white") {
+    sideBar.style.backgroundColor = "black";
+    sideBar.style.color = "white";
+    mainSide.style.backgroundColor = "black";
+    mainSide.style.color = "white";
+    currentTheme = "dark";
+  } else {
+    sideBar.style.backgroundColor = "white";
+    sideBar.style.color = "black";
+    mainSide.style.backgroundColor = "white";
+    mainSide.style.color = "black";
+    // sideBarShow.stye.border = "10px solid white";
+    // sideBarShow.stye.filter = "drop-shadow(10px 10px 5px white)";
 
-//     the = "white";
-//     console.log(the);
-//   }
-// });
+    currentTheme = "white";
+    console.log(currentTheme);
+  }
+});
 
 let changePic = () => {
   location.href = "photo.html";
