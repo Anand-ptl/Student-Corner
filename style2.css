@@ -87,6 +87,7 @@ input {
   filter: drop-shadow(5px 5px 5px black);
   transition: all ease 0.3s;
 }
+
 .loading {
   width: 250px;
   height: 250px;
