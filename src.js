@@ -10,6 +10,11 @@ let insCode = document.querySelector("#insCode");
 let saveBtn = document.querySelector(".save");
 let details = document.querySelector(".details");
 
+//loading
+let loadingBar = () => {
+  loading.style.display = "block";
+};
+
 let randerData = () => {
   name.innerText = localStorage.getItem("Name");
   dateOfBirth.innerText = localStorage.getItem("DOB");
@@ -25,10 +30,6 @@ let goBack = () => {
 };
 let stay = () => {
   location.href = "edit.html";
-};
-
-let loadingBar = () => {
-  loading.style.display = "block";
 };
 
 let saveData = () => {
@@ -68,9 +69,9 @@ let saveData = () => {
           p.innerText = input.value;
           input.replaceWith(p);
           localStorage.setItem(p.id, p.innerText);
-          setTimeout(() => {
-            loadingBar();
-          }, 700);
+
+          loadingBar();
+
           setTimeout(() => {
             goBack();
           }, 1000);
