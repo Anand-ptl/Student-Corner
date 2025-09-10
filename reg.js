@@ -72,10 +72,11 @@ let saveData = (e) => {
     Email.value !== ""
     // imginput.value === ""
   ) {
+    loadingBar();
+
     setTimeout(() => {
-      loadingBar();
       location.href = "save.html";
-    }, 400);
+    }, 1500);
   }
 };
 savebtn.addEventListener("click", saveData);

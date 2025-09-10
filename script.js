@@ -10,9 +10,9 @@ let editpic = document.querySelector(".editpic");
 let dataClear = document.querySelector(".dataClear");
 let p = document.querySelector("p");
 
-let loadingBar = () => {
-  loading.style.display = "block";
-};
+// let loadingBar = () => {
+//   loading.style.display = "block";
+// };
 let clearData = () => {
   localStorage.clear();
   location.reload();
@@ -43,11 +43,11 @@ let closeSideBar = (e) => {
   }
 };
 mainSide.addEventListener("click", closeSideBar);
+
 let editPage = () => {
   setTimeout(() => {
-    loadingBar();
     document.location.href = "edit.html";
-  }, 100);
+  }, 400);
 };
 editButton.addEventListener("click", editPage);
 
