@@ -84,25 +84,40 @@ scrollSideBar.addEventListener("click", function () {
 
 //theme change
 let theme = document.querySelector(".theme");
-let currentTheme = "white";
 
+// Apply saved theme on page load
+if (localStorage.getItem("themeop") === "black") {
+  body.style.backgroundColor = "black";
+  body.style.color = "white";
+  sideBar.style.backgroundColor = "black";
+  sideBar.style.color = "white";
+  mainSide.style.backgroundColor = "black";
+  mainSide.style.color = "white";
+} else {
+  body.style.backgroundColor = "white";
+  body.style.color = "black";
+  sideBar.style.backgroundColor = "white";
+  sideBar.style.color = "black";
+  mainSide.style.backgroundColor = "white";
+  mainSide.style.color = "black";
+}
 theme.addEventListener("click", function () {
-  if (currentTheme === "white") {
+  if (localStorage.getItem("themeop") === "white") {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
     sideBar.style.backgroundColor = "black";
     sideBar.style.color = "white";
     mainSide.style.backgroundColor = "black";
     mainSide.style.color = "white";
-    currentTheme = "dark";
+    localStorage.setItem("themeop", "black");
   } else {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
     sideBar.style.backgroundColor = "white";
     sideBar.style.color = "black";
     mainSide.style.backgroundColor = "white";
     mainSide.style.color = "black";
-    // sideBarShow.stye.border = "10px solid white";
-    // sideBarShow.stye.filter = "drop-shadow(10px 10px 5px white)";
-
-    currentTheme = "white";
-    console.log(currentTheme);
+    localStorage.setItem("themeop", "white");
   }
 });
 
