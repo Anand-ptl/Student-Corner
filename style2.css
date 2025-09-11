@@ -30,7 +30,8 @@
   gap: 20px;
   flex-direction: column;
   padding: 10px;
-  background-color: rgb(163, 182, 199);
+  /* background-color: rgb(163, 182, 199); */
+  background-color: rgb(213, 214, 215);
   border: 2px solid purple;
   filter: drop-shadow(10px 10px 5px black);
 }
@@ -92,10 +93,10 @@ input {
   width: 250px;
   height: 250px;
   /* background-color: white; */
-  border: 20px solid yellow;
-  border-top: 20px solid rgb(137, 29, 161);
+  border: 20px dotted none;
+  border-top: 20px dotted rgb(133, 101, 193);
   border-radius: 50%;
-  animation: spin 1s ease infinite;
+  animation: spin 2s ease-in infinite;
   position: fixed;
   top: 40%;
   left: 40%;
@@ -143,16 +144,15 @@ input {
     border-top:7px solid rgb(137, 29, 161);
   } */
   .loading {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border: 10px solid yellow;
-    border-top: 10px solid rgb(137, 29, 161);
+    width: 150px;
+    height: 150px;
+    border: 20px dotted none;
+    border-top: 20px dotted rgb(133, 101, 193);
     border-radius: 50%;
-    animation: spin 1s ease-in-out infinite;
+    animation: spin 2s ease-in infinite;
     position: fixed;
-    top: 50%;
-    left: 34%;
+    top: 33%;
+    left: 28%;
     transform: translate(-50%, -50%);
   }
 }

@@ -14,8 +14,13 @@ let p = document.querySelector("p");
 //   loading.style.display = "block";
 // };
 let clearData = () => {
-  localStorage.clear();
-  location.reload();
+  if (confirm("Are you sure you want to clear all data?")) {
+    localStorage.clear();
+    location.reload();
+    setTimeout(() => {
+      alert("You Need To Register");
+    }, 1000);
+  }
 };
 dataClear.addEventListener("click", clearData);
 

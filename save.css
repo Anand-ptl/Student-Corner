@@ -124,3 +124,41 @@ span {
   font-weight: bold;
   font-size: 20px;
 }
+.loading {
+  width: 250px;
+  height: 250px;
+  /* background-color: white; */
+  border: 20px dotted rgb(163, 182, 199);
+  border-top: 20px dotted rgb(255, 255, 255);
+  border-radius: 50%;
+  animation: spin 2s ease-in infinite;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .loading {
+    width: 120px;
+    height: 120px;
+    /* background-color: white; */
+    border: 20px dotted rgb(163, 182, 199);
+    border-top: 20px dotted rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: spin 2s ease-in infinite;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+}
